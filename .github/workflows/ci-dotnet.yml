@@ -28,6 +28,7 @@ jobs:
       run: dotnet restore DotNetDemo.csproj
   
     - name: Build Project
+      working-directory: .
       run: dotnet build --configuration Release --no-restore
 
     - name: Execute Unit Tests
